@@ -1,0 +1,32 @@
+@{
+    ViewData["Title"] = "Вход";
+}
+
+<h2>Авторизация</h2>
+
+@if (ViewBag.Error != null)
+{
+    <p style="color:red">@ViewBag.Error</p>
+}
+
+<form asp-action="Login" method="post">
+
+    <div>
+        <label>Логин</label>
+        <input name="login" class="form-control"/>
+    </div>
+
+    <div>
+        <label>Пароль</label>
+        <input type="password"
+               name="password"
+               class="form-control"/>
+    </div>
+
+    <br/>
+
+    <button class="btn btn-primary">
+        Войти
+    </button>
+
+</form>
